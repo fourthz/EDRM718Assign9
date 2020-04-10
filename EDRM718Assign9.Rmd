@@ -51,7 +51,21 @@ tapply(inc_data$Income, inc_data$Race, sd)
 
 ```
 
-### Inferential analysis
+This is a plot to look at the difference in income for the race categories 
+while taking into account years of education.
+
+```{r}
+
+plot(inc_data$Income ~ inc_data$Educ, pch=as.numeric(inc_data$Race),
+     col=as.numeric(inc_data$Race), xlab = "Years of Education",
+     ylab = "Income (in $1000)", main = "Income as a Function of Education by        Race")
+
+legend("topleft", inset = .05, legend = c("Black", "Hispanic", "White"),
+       title = "Race", pch = c(1:3), col = c(1:3), cex = .7)
+
+```
+
+
 
 This is a check for interaction.
 
