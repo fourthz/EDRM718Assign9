@@ -22,3 +22,32 @@ inc_data$Race <- factor(inc_data$Race,
 
 ```
 
+
+### Descriptive Comparison of Income
+
+These are boxplots that show differences in income by ethnicity **without**
+adjusting for the years of education.
+
+```{r}
+
+boxplot(inc_data$Income ~ inc_data$Race, ylim = c(0, 120), xlab = "Race",
+        ylab = "Income (in $1000)", main = "Income by Race")
+
+```
+
+Here are the five-number summaries and means for the ethnic group incomes.
+
+```{r}
+
+tapply(inc_data$Income, inc_data$Race, summary)
+
+```
+
+Here are the standard deviations for the ethnic group incomes.
+
+```{r}
+
+tapply(inc_data$Income, inc_data$Race, sd)
+
+```
+
