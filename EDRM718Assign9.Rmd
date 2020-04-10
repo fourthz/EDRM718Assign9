@@ -65,7 +65,7 @@ legend("topleft", inset = .05, legend = c("Black", "Hispanic", "White"),
 
 ```
 
-
+### Inferential analysis
 
 This is a check for interaction.
 
