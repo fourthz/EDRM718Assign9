@@ -51,3 +51,16 @@ tapply(inc_data$Income, inc_data$Race, sd)
 
 ```
 
+### Inferential analysis
+
+This is a check for interaction.
+
+```{r}
+# Now let's check for interaction.
+
+model1 <- inc_data$Income ~ inc_data$Educ * inc_data$Race
+model1.out <- lm(model1)
+anova(model1.out)
+
+```
+
