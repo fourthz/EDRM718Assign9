@@ -1,0 +1,24 @@
+---
+title: "EDRM 718 Assignment 9"
+author: "Michael and Mike"
+date: "10 April 2020"
+output: html_notebook
+---
+
+This is a study of the relationship of income to ethnicity using a sample of
+American workers. In this study I want to determine if there is a difference
+in the average income of workers of different ethnic backgrounds after 
+adjusting for years of education.
+
+```{r include=FALSE}
+
+library(tidyverse)
+
+inc_data <- read_csv("Ethnic Income Data.csv")
+
+inc_data$Race <- factor(inc_data$Race,
+                        levels = c("b", "h", "w"),
+                        labels = c("Black", "Hispanic", "White"))
+
+```
+
